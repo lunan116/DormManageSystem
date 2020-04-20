@@ -17,7 +17,13 @@ import
     MenuItemGroup,
     MenuItem,
     Breadcrumb,
-    BreadcrumbItem
+    BreadcrumbItem,
+    Table,
+    TableColumn,
+    Dialog,
+    Pagination,
+    MessageBox,
+    Tree
     } from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 
@@ -38,4 +44,14 @@ Vue.use(MenuItemGroup)
 Vue.use(MenuItem)
 Vue.use(Breadcrumb)
 Vue.use(BreadcrumbItem)
+Vue.use(Table)
+Vue.use(TableColumn)
+Vue.use(Dialog)
+Vue.use(Pagination)
+Vue.use(Tree)
+
 Vue.prototype.$message = Message;
+Vue.prototype.$msgbox = MessageBox;
+Vue.prototype.$alert = MessageBox.alert;
+Vue.prototype.$confirm = MessageBox.confirm;
+Vue.prototype.$prompt = MessageBox.prompt;

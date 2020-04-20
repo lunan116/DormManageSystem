@@ -84,6 +84,7 @@ export default {
                }
                this.$message.success('修改密码成功！')
            }else{
+               this.$message.error(res.data.errorMessage)
                this.$message.error("修改密码失败！")
            }
           } else {
