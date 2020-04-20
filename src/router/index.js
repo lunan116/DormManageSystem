@@ -14,7 +14,7 @@ import MonthlyPeopleRoomFee from '../components/roomFeeManage/MonthlyPeopleRoomF
 import roomCharges from '../components/roomFeeManage/roomCharges.vue'
 import rightsManage from '../components/rightsManage/rightsManage.vue'
 import modifyPassword from '../components/rightsManage/modifyPassword.vue'
-
+import administrator from '../components/rightsManage/administrator.vue'
 
 Vue.use(VueRouter)
 
@@ -38,7 +38,8 @@ Vue.use(VueRouter)
       {path:'/roomCharges',component:roomCharges},
       //权限管理
       {path:'/rightsManage',component:rightsManage},
-      {path:'/modifyPassword',component:modifyPassword}
+      {path:'/modifyPassword',component:modifyPassword},
+      {path:'/administrator',component:administrator}
     ]
   },
   {
