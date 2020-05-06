@@ -173,6 +173,8 @@ body{height: 100%;}
 .el-submenu__title{border-bottom-color:#409EFF !important;}
 .is-opened  .el-submenu__title{color:#409EFF !important;}
 .title{color:white;font-weight: bold;}
-.el-header{display: flex;justify-content: space-between;align-items: center;}
+.el-header{display: flex;justify-content: space-between;align-items: center;position:fixed;z-index: 1500;width: 100%;}
+.el-aside{position:fixed;z-index: 1500;top: 60px;min-height: 100%;}
 .el-button{height: 42px;}
+.el-main{margin-left: 200px;margin-top: 60px;}
 </style>

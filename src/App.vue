@@ -30,4 +30,9 @@ html,body{margin:0;padding:0;height:100%;}
   color: #2c3e50;
   margin-top: 0px;
 }
+.el-table th.gutter {
+  display: table-cell !important;
+}
+
+.customWidth{width:65% !important;}
 </style>
