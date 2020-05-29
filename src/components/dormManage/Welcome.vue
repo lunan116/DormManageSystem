@@ -9,7 +9,7 @@
         <el-row :gutter="20">
         <el-col :span="6">
           <el-card class="box-card">
-          <div slot="header" class="clearfix">
+          <div slot="header" class="clearfix clearfix1">
             <p>总房间数</p>
              <el-tag
              type="success"
@@ -24,7 +24,7 @@
         <div class="grid-content bg-purple"></div></el-col>
         <el-col :span="6">
           <el-card class="box-card">
-          <div slot="header" class="clearfix">
+          <div slot="header" class="clearfix clearfix1">
             <p>空房间数</p>
              <el-tag
               type="danger"
@@ -39,12 +39,12 @@
         <div class="grid-content bg-purple"></div></el-col>
         <el-col :span="6">
           <el-card class="box-card">
-          <div slot="header" class="clearfix">
+          <div slot="header" class="clearfix clearfix1">
             <p>床位数量</p>
              <el-tag
                 type="warming"
                 effect="dark">
-                今天
+                   今天
               </el-tag>
           </div>
           <div  class="text item">
@@ -54,7 +54,7 @@
         <div class="grid-content bg-purple"></div></el-col>
         <el-col :span="6">
           <el-card class="box-card">
-          <div slot="header" class="clearfix">
+          <div slot="header" class="clearfix clearfix1">
             <p>在住人数</p>
              <el-tag
              type="info"
@@ -446,6 +446,9 @@ export default {
     display:flex;
     line-height: 40px;
     justify-content: space-between;
+  }
+  .clearfix1{
+    line-height: 18px;
   }
   .tableRow{margin-top: 20px;}
   .box-card {
