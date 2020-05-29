@@ -29,7 +29,8 @@ import
     Option,
     Radio,
     TimePicker,
-    DatePicker
+    DatePicker,
+    Loading 
     } from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 

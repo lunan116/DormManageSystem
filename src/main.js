@@ -2,6 +2,9 @@ import Vue from 'vue'
 import './plugins/element.js'
 import App from './App.vue'
 import router from './router'
+//使用echarts
+import echarts from 'echarts'
+Vue.prototype.$echarts = echarts
 
 import './plugins/axios'
 // main.js

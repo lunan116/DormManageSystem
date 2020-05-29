@@ -8,7 +8,7 @@
       </el-breadcrumb>
       <!-- 表格 -->
       <el-card>
-        <el-select @change="handleChange" :popper-append-to-body="false" v-model="query.dormNo" clearable placeholder="请选择" popper-class="selectOption">
+        <el-select @change="handleChange" :popper-append-to-body="false" v-model="query.dormNo" clearable placeholder="请选择宿舍楼号" popper-class="selectOption">
           <el-option
             v-for="item in selectDataList"
             :key="item.value"
@@ -16,7 +16,7 @@
             :value="item.value">
           </el-option>
         </el-select>
-        <el-select @change="handleChange1" :popper-append-to-body="false" v-model="query.type" clearable placeholder="请选择" popper-class="selectOption">
+        <el-select @change="handleChange" :popper-append-to-body="false" v-model="query.type"  placeholder="请选择入住状态" popper-class="selectOption">
           <el-option
             v-for="item in selectDataList1"
             :key="item.value"
@@ -24,6 +24,7 @@
             :value="item.value">
           </el-option>
         </el-select>
+        <el-input class="keyword" @input="handleChange"  clearable v-model="query.keyword" placeholder="请输入关键字"></el-input>
         <el-table
           :header-cell-style="{'text-align':'center'}"
           :cell-style="{'text-align':'center'}"
@@ -133,7 +134,8 @@ export default {
         pageSize:10,
         currentPage:1,
         dormNo:"",
-        type:'0'
+        type:'0',
+        keyword:""
       },
       currentPage4: 1,
       total:0,
@@ -217,6 +219,7 @@ export default {
         //console.log(this.query)
     },
     handleChange(){
+      this.query.currentPage = 1
       this.getDataLists()
     },
     handleChange1(){
@@ -254,4 +257,5 @@ export default {
 }
 .el-select{margin-left: 20px;}
 .el-popper{display:absolute !important;top:0px !important;margin-top: 50px !important;}
+.keyword{width: 20%;margin-left: 20px;}
 </style>

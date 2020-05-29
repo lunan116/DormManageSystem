@@ -2,6 +2,7 @@
 
 import Vue from 'vue';
 import axios from "axios";
+import { Loading } from 'element-ui';
 
 // Full config:  https://github.com/axios/axios#request-config
 // axios.defaults.baseURL = process.env.baseURL || process.env.apiUrl || '';
@@ -14,6 +15,9 @@ let config = {
   // timeout: 60 * 1000, // Timeout
   // withCredentials: true, // Check cross-site Access-Control
 };
+
+let loadingArr = 0
+let loadingInstance
 
 const _axios = axios.create(config);
 
@@ -32,6 +36,10 @@ _axios.interceptors.request.use(
 _axios.interceptors.response.use(
   function(response) {
     // Do something with response data
+    loadingArr--; // 动画加载个数减1
+    if (loadingArr === 0) {
+        loadingInstance.close();
+    }
     return response;
   },
   function(error) {
@@ -48,6 +56,11 @@ _axios.interceptors.request.use(
     if (!config.headers.hasOwnProperty('Authorization') && token) {
       config.headers.Authorization = token;
     }
+    loadingInstance = Loading.service({ // 加载动画
+        text: '玩命加载中',
+        background: 'rgba(255, 255, 255, 0.6)'
+    });
+    loadingArr++;
     return config;
   },
   error => {
